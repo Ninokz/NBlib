@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\Concurrency">
+      <UniqueIdentifier>{e03b9d03-7d32-4452-8b2f-eada97ee9726}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Concurrency">
+      <UniqueIdentifier>{6f4f9a43-9eb1-4eb5-bd73-a0677d96bcb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\NetBase">
+      <UniqueIdentifier>{c6c61357-644f-4d8a-9bda-af58cbc23488}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\NetBase">
+      <UniqueIdentifier>{8613409a-ba6f-4537-b35e-6a1d3fa237b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Suc">
+      <UniqueIdentifier>{79b3ddb5-70d1-49e8-b2df-95c316795330}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Suc">
+      <UniqueIdentifier>{38099fe8-e970-466a-8a73-3f7502d26e2b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="nocopyable.h">
+      <Filter>头文件\Suc</Filter>
+    </ClInclude>
+    <ClInclude Include="singleton.h">
+      <Filter>头文件\Suc</Filter>
+    </ClInclude>
+    <ClInclude Include="concurrentqueue.h">
+      <Filter>头文件\Concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="functionWrapper.h">
+      <Filter>头文件\Concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="jointhreads.h">
+      <Filter>头文件\Concurrency</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
