@@ -9,15 +9,36 @@ namespace Nano {
 		}
 
 		void CEventHandler::addCloseHandler(std::weak_ptr<ICloseEventHandler> handler) {
-			this->m_closeHandlers.push_back(handler);
+			if (!handler.expired())
+			{
+				this->m_closeHandlers.push_back(handler);
+			}
+			else
+			{
+				throw std::runtime_error("handler is expired");
+			}
 		}
 
 		void CEventHandler::addConnectHandler(std::weak_ptr<IConnectEventHandler> handler) {
-			this->m_connectHandlers.push_back(handler);
+			if (!handler.expired())
+			{
+				this->m_connectHandlers.push_back(handler);
+			}
+			else
+			{
+				throw std::runtime_error("handler is expired");
+			}
 		}
 
 		void CEventHandler::addDataReadyHandler(std::weak_ptr<IDataReadyEventHandler> handler) {
-			this->m_dataReadyHandlers.push_back(handler);
+			if (!handler.expired())
+			{
+				this->m_dataReadyHandlers.push_back(handler);
+			}
+			else
+			{
+				throw std::runtime_error("handler is expired");
+			}
 		}
 
 		void CEventHandler::onClosed(std::shared_ptr<Session> sender) {
