@@ -10,18 +10,21 @@ namespace Nano {
 	namespace Communication {
 		class ICloseEventHandler {
 		public:
+			virtual ~ICloseEventHandler() = default;
 			virtual void onClosed(std::shared_ptr<Session> sender) = 0;
 		};
 
 		class IConnectEventHandler
 		{
 		public:
+			virtual ~IConnectEventHandler() = default;
 			virtual void onConnected(std::shared_ptr<Session> sender) = 0;
 		};
 
 		class IDataReadyEventHandler
 		{
 		public:
+			virtual ~IDataReadyEventHandler() = default;
 			virtual void onDataReady(std::shared_ptr<Session> sender, std::shared_ptr<RecvPacket> packet) = 0;
 		};
 
