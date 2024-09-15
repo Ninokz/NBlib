@@ -17,18 +17,10 @@ namespace Nano {
 				std::shared_ptr<T> data;
 				std::unique_ptr<node> next;
 				node* prev;
-				
+
 				node() : prev(nullptr) {}
 			};
-
-			std::mutex m_head_mutex;
-			std::unique_ptr<node> m_head;
-			std::mutex m_tail_mutex;
-			node* m_tail;
-			std::condition_variable m_data_cond;
-			std::atomic_bool m_bstop;
-			std::atomic_int m_count;
-
+		private:
 			node* get_tail()
 			{
 				std::lock_guard<std::mutex> tail_lock(m_tail_mutex);
@@ -195,6 +187,14 @@ namespace Nano {
 				m_count.fetch_sub(1);
 				return true;
 			}
+		private:
+			std::mutex m_head_mutex;
+			std::unique_ptr<node> m_head;
+			std::mutex m_tail_mutex;
+			node* m_tail;
+			std::condition_variable m_data_cond;
+			std::atomic_bool m_bstop;
+			std::atomic_int m_count;
 		};
 	}
 }

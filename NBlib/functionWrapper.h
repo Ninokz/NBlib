@@ -1,5 +1,6 @@
 #pragma once
 #include <memory>
+
 #include "nocopyable.h"
 
 namespace Nano {
@@ -11,6 +12,7 @@ namespace Nano {
 				virtual ~impl_base() {}
 			};
 			std::unique_ptr<impl_base> impl;
+
 			template<typename F>
 			struct impl_type : impl_base
 			{
@@ -20,14 +22,10 @@ namespace Nano {
 			};
 		public:
 			template<typename F>
-			FunctionWrapper(F&& f) :
-				impl(new impl_type<F>(std::move(f)))
-			{}
+			FunctionWrapper(F&& f) : impl(new impl_type<F>(std::move(f))) {}
 			void operator()() { impl->call(); }
 			FunctionWrapper() = default;
-			FunctionWrapper(FunctionWrapper&& other) noexcept :
-				impl(std::move(other.impl))
-			{}
+			FunctionWrapper(FunctionWrapper&& other) noexcept : impl(std::move(other.impl)) {}
 			FunctionWrapper& operator=(FunctionWrapper&& other) noexcept
 			{
 				impl = std::move(other.impl);

@@ -70,6 +70,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>F:\Library\boost_1_85_0;$(IncludePath)</IncludePath>
+    <LibraryPath>F:\Library\boost_1_85_0\stage\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -102,7 +106,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_WIN32_WINNT=0x0601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -127,14 +131,45 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="baseclient.h" />
+    <ClInclude Include="baseserver.h" />
+    <ClInclude Include="ceventhandler.h" />
+    <ClInclude Include="conacceptor.h" />
     <ClInclude Include="concurrentqueue.h" />
-    <ClInclude Include="functionWrapper.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="env.h" />
+    <ClInclude Include="functionwrapper.h" />
+    <ClInclude Include="ioservicepool.h" />
     <ClInclude Include="jointhreads.h" />
+    <ClInclude Include="log.h" />
+    <ClInclude Include="mutex.h" />
     <ClInclude Include="nocopyable.h" />
+    <ClInclude Include="packet.h" />
+    <ClInclude Include="parrallenThreadPool.h" />
+    <ClInclude Include="session.h" />
+    <ClInclude Include="sessionmanager.h" />
+    <ClInclude Include="simplethreadpool.h" />
     <ClInclude Include="singleton.h" />
+    <ClInclude Include="stealThreadPool.h" />
+    <ClInclude Include="test.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="baseclient.cpp" />
+    <ClCompile Include="baseserver.cpp" />
+    <ClCompile Include="ceventhandler.cpp" />
+    <ClCompile Include="conacceptor.cpp" />
+    <ClCompile Include="config.cpp" />
+    <ClCompile Include="env.cpp" />
+    <ClCompile Include="ioservicepool.cpp" />
+    <ClCompile Include="log.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="mutex.cpp" />
+    <ClCompile Include="packet.cpp" />
+    <ClCompile Include="parrallenThreadPool.cpp" />
+    <ClCompile Include="session.cpp" />
+    <ClCompile Include="sessionmanager.cpp" />
+    <ClCompile Include="simplethreadpool.cpp" />
+    <ClCompile Include="stealThreadPool.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

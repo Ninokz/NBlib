@@ -42,16 +42,109 @@
     <ClInclude Include="concurrentqueue.h">
       <Filter>头文件\Concurrency</Filter>
     </ClInclude>
-    <ClInclude Include="functionWrapper.h">
+    <ClInclude Include="functionwrapper.h">
       <Filter>头文件\Concurrency</Filter>
     </ClInclude>
     <ClInclude Include="jointhreads.h">
       <Filter>头文件\Concurrency</Filter>
     </ClInclude>
+    <ClInclude Include="simplethreadpool.h">
+      <Filter>头文件\Concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="parrallenThreadPool.h">
+      <Filter>头文件\Concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="stealThreadPool.h">
+      <Filter>头文件\Concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="mutex.h">
+      <Filter>头文件\Concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="log.h">
+      <Filter>头文件\Suc</Filter>
+    </ClInclude>
+    <ClInclude Include="env.h">
+      <Filter>头文件\Suc</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>头文件\Suc</Filter>
+    </ClInclude>
+    <ClInclude Include="ceventhandler.h">
+      <Filter>头文件\NetBase</Filter>
+    </ClInclude>
+    <ClInclude Include="session.h">
+      <Filter>头文件\NetBase</Filter>
+    </ClInclude>
+    <ClInclude Include="sessionmanager.h">
+      <Filter>头文件\NetBase</Filter>
+    </ClInclude>
+    <ClInclude Include="packet.h">
+      <Filter>头文件\NetBase</Filter>
+    </ClInclude>
+    <ClInclude Include="ioservicepool.h">
+      <Filter>头文件\NetBase</Filter>
+    </ClInclude>
+    <ClInclude Include="conacceptor.h">
+      <Filter>头文件\NetBase</Filter>
+    </ClInclude>
+    <ClInclude Include="baseclient.h">
+      <Filter>头文件\NetBase</Filter>
+    </ClInclude>
+    <ClInclude Include="baseserver.h">
+      <Filter>头文件\NetBase</Filter>
+    </ClInclude>
+    <ClInclude Include="test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="simplethreadpool.cpp">
+      <Filter>源文件\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="parrallenThreadPool.cpp">
+      <Filter>源文件\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="stealThreadPool.cpp">
+      <Filter>源文件\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="mutex.cpp">
+      <Filter>源文件\Concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="log.cpp">
+      <Filter>源文件\Suc</Filter>
+    </ClCompile>
+    <ClCompile Include="env.cpp">
+      <Filter>源文件\Suc</Filter>
+    </ClCompile>
+    <ClCompile Include="config.cpp">
+      <Filter>源文件\Suc</Filter>
+    </ClCompile>
+    <ClCompile Include="session.cpp">
+      <Filter>源文件\NetBase</Filter>
+    </ClCompile>
+    <ClCompile Include="sessionmanager.cpp">
+      <Filter>源文件\NetBase</Filter>
+    </ClCompile>
+    <ClCompile Include="ceventhandler.cpp">
+      <Filter>源文件\NetBase</Filter>
+    </ClCompile>
+    <ClCompile Include="packet.cpp">
+      <Filter>源文件\NetBase</Filter>
+    </ClCompile>
+    <ClCompile Include="ioservicepool.cpp">
+      <Filter>源文件\NetBase</Filter>
+    </ClCompile>
+    <ClCompile Include="conacceptor.cpp">
+      <Filter>源文件\NetBase</Filter>
+    </ClCompile>
+    <ClCompile Include="baseclient.cpp">
+      <Filter>源文件\NetBase</Filter>
+    </ClCompile>
+    <ClCompile Include="baseserver.cpp">
+      <Filter>源文件\NetBase</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
