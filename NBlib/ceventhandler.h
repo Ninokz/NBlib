@@ -6,6 +6,7 @@
 #include "packet.h"
 #include "session.h"
 
+
 namespace Nano {
 	namespace Communication {
 		class ICloseEventHandler {
@@ -44,9 +45,9 @@ namespace Nano {
 			void onConnected(std::shared_ptr<Session> sender);
 			void onDataReady(std::shared_ptr<Session> sender, std::shared_ptr<RecvPacket> packet);
 		protected:
-			std::vector<std::weak_ptr<ICloseEventHandler>> m_closeHandlers;
-			std::vector<std::weak_ptr<IConnectEventHandler>> m_connectHandlers;
-			std::vector<std::weak_ptr<IDataReadyEventHandler>> m_dataReadyHandlers;
+			std::list<std::weak_ptr<ICloseEventHandler>> m_closeHandlers;
+			std::list<std::weak_ptr<IConnectEventHandler>> m_connectHandlers;
+			std::list<std::weak_ptr<IDataReadyEventHandler>> m_dataReadyHandlers;
 			std::mutex m_mutex;
 		};
 	}

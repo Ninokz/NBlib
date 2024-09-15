@@ -57,7 +57,7 @@ namespace Nano {
 
 		void BaseClient::send(const char* data, int dataLength)
 		{
-			if (m_session)
+			if (m_session && m_running)
 			{
 				m_session->send(data, dataLength);
 			}
