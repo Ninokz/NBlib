@@ -30,7 +30,6 @@ namespace Nano {
 			catch (std::exception& e) {
 				std::cerr << e.what() << std::endl;
 				this->close();
-				throw e;
 			}
 		}
 
