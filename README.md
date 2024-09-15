@@ -24,10 +24,8 @@
 
 ## Dep.
 
-该项目基于 [Boost.Asio](https://www.boost.org/doc/libs/1_81_0/doc/html/boost_asio.html) 实现，并需要以下依赖项：
-
-- **Boost C++ 库**：特别是 `Boost.Asio`，用于网络通信和异步 I/O 操作。你可以从 [Boost 官方网站](https://www.boost.org/) 下载并安装 Boost 库。
-- **C++11 或以上**：项目使用了 C++11 特性，确保你的编译器支持 C++11 或更高版本。
+- [Boost 1.85.0](https://www.boost.org/users/history/version_1_85_0.html)
+- C++11
 
 ## Make.
 
