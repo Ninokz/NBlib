@@ -25,10 +25,9 @@ tlv消息格式解决粘包问题
 ## Features.
 
 - **多线程支持**：包括简单线程池和任务窃取线程池（`SimpleThreadPool` 和 `StealThreadPool`），用于高效的任务调度和并行处理。
-- **并发队列**：提供并发队列 (`concurrentqueue.h`)，支持高效的数据传输和任务分发。
 - **网络通信**：基于 `Boost.Asio` 的服务器和客户端实现 (`BaseServer` 和 `BaseClient`)，支持异步 I/O 和高并发连接处理。
-- **线程管理**：线程池管理（如 `ioservicepool.h`、`parrallenThreadPool.h` 等），支持多线程环境下的资源管理和调度。
-- **日志系统**：提供基础的日志记录工具 (`log.h`)。
+- **线程管理**：线程池管理（如 `ioservicepool.h`、`simplelenThreadPool.h` 等），支持多线程环境下的资源管理和调度。
+- **日志系统**：提供基础的异步日志记录工具 (`log.h`)。
 - **配置管理**：支持配置文件的加载和解析 (`config.h`)工具，方便管理应用的配置选项。
 - **单例模式**：提供单例模式模板 (`singleton.h`)，用于全局对象的管理。
 
