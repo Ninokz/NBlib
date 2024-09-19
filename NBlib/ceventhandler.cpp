@@ -42,7 +42,7 @@ namespace Nano {
 		}
 
 		void CEventHandler::onClosed(std::shared_ptr<Session> sender) {
-			std::lock_guard<std::mutex> lock(this->m_mutex);
+			std::lock_guard<std::mutex> lock(this->m_closeMutex);
 			for (auto it = m_closeHandlers.begin(); it != m_closeHandlers.end();) {
 				if (auto handler = it->lock()) {
 					handler->onClosed(sender);
@@ -55,7 +55,7 @@ namespace Nano {
 		}
 
 		void CEventHandler::onConnected(std::shared_ptr<Session> sender) {
-			std::lock_guard<std::mutex> lock(this->m_mutex);
+			std::lock_guard<std::mutex> lock(this->m_connectMutex);
 			for (auto it = m_connectHandlers.begin(); it != m_connectHandlers.end();) {
 				if (auto handler = it->lock()) {
 					handler->onConnected(sender);
@@ -68,7 +68,7 @@ namespace Nano {
 		}
 
 		void CEventHandler::onDataReady(std::shared_ptr<Session> sender, std::shared_ptr<RecvPacket> packet) {
-			std::lock_guard<std::mutex> lock(this->m_mutex);
+			std::lock_guard<std::mutex> lock(this->m_dataReadyMutex);
 			for (auto it = m_dataReadyHandlers.begin(); it != m_dataReadyHandlers.end();) {
 				if (auto handler = it->lock()) {
 					handler->onDataReady(sender, packet);

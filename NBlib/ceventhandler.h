@@ -48,7 +48,10 @@ namespace Nano {
 			std::vector<std::weak_ptr<ICloseEventHandler>> m_closeHandlers;
 			std::vector<std::weak_ptr<IConnectEventHandler>> m_connectHandlers;
 			std::vector<std::weak_ptr<IDataReadyEventHandler>> m_dataReadyHandlers;
-			std::mutex m_mutex;
+
+			std::mutex m_closeMutex;
+			std::mutex m_connectMutex;
+			std::mutex m_dataReadyMutex;
 		};
 	}
 }
