@@ -16,15 +16,9 @@
 
  ![](https://observer-storage.oss-cn-chengdu.aliyuncs.com/github/Nano/NBlib.png)
 
-tlv消息格式解决粘包问题
-
-字节序处理平台不一的大小端存储问题
-
-`ioservicepool`解决提升网络io并发处理的效率问题
-
 ## Features.
 
-- **多线程支持**：包括简单线程池和任务窃取线程池（`SimpleThreadPool` 和 `StealThreadPool`），用于高效的任务调度和并行处理。
+- **多线程支持**：包括简单线程池和任务窃取线程池等（`SimpleThreadPool` 和 `StealThreadPool`），用于高效的任务调度和并行处理。
 - **网络通信**：基于 `Boost.Asio` 的服务器和客户端实现 (`BaseServer` 和 `BaseClient`)，支持异步 I/O 和高并发连接处理。
 - **线程管理**：线程池管理（如 `ioservicepool.h`、`simplelenThreadPool.h` 等），支持多线程环境下的资源管理和调度。
 - **日志系统**：提供基础的异步日志记录工具 (`log.h`)。
