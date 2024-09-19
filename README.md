@@ -2,7 +2,7 @@
 
 ## Intro.
 
-🐂🍺NBlib: 基于 **Boost.Asio** 的 C++ 网络库，专注于并发编程、线程池管理和网络通信。该库提供了基础的服务器和客户端实现，支持多线程任务调度与管理，学习使用；
+🐂🍺NBlib: 基于 **Boost.Asio** 的 C++ 网络库，关注于并发编程、线程池管理和网络通信。该库提供了基础的服务器和客户端实现，支持多线程任务调度与管理，学习使用；
 
 ## Cat.
 
@@ -15,12 +15,6 @@
 ## Design.
 
  ![](https://observer-storage.oss-cn-chengdu.aliyuncs.com/github/Nano/NBlib.png)
-
-tlv消息格式解决粘包问题
-
-字节序处理平台不一的大小端存储问题
-
-`ioservicepool`解决提升网络io并发处理的效率问题
 
 ## Features.
 
