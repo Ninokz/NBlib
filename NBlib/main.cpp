@@ -2,6 +2,6 @@
 
 int main()
 {
-	TestServer();
+
 	return 0;
 }

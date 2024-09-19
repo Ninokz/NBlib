@@ -6,11 +6,21 @@
 
 ## Cat.
 
+- [设计架构](#功能特性)
 - [功能特性](#功能特性)
 - [依赖项](#依赖项)
 - [编译与安装](#编译与安装)
 - [文件结构](#文件结构)
-- [贡献](#贡献)
+
+## Design.
+
+ ![](https://observer-storage.oss-cn-chengdu.aliyuncs.com/github/Nano/NBlib.png)
+
+tlv消息格式解决粘包问题
+
+字节序处理平台不一的大小端存储问题
+
+`ioservicepool`解决提升网络io并发处理的效率问题
 
 ## Features.
 
